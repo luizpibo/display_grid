@@ -14,20 +14,29 @@
     grid-template-columns: auto;
 
     /*Propriedade que define qual será o tamano das linhas, tendo 3 linhas no total*/
-    grid-template-rows: 50px 100vh  auto; 
+    grid-template-rows: 50px auto  auto; 
 }
 
 .cabecalho {
+    align-items: center;
+    display: flex;
     /*Definindo a area da classe*/
     grid-area: cabecalho;
+    padding: 0 2rem;
 }
 
 .conteudo {
     /*Definindo a area da classe*/
     grid-area: conteudo;
+    padding: 0 2rem;
 }
 
 .rodape {
+    background: #fdfdfd;
+    color: #333;
+    font-size: 1rem;
     /*Definindo a area da classe*/
     grid-area: rodape;
+    padding: 1rem;
+    text-align: center;
 }
