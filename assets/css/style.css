@@ -1,26 +1,32 @@
 .app {
-    background: #f1f1f1;
+    /*Definimos que o elemento é utilizará um display grid*/
     display: grid;  
     font-family: Arial, Helvetica, sans-serif;
+
+    /*Propriedade que define quais aréas teremos no layout*/
     grid-template-areas: 
         "cabecalho"
         "conteudo"
         "rodape";
+        
+    /*Propriedade que define qual será o template das colunas*/
     grid-template-columns: auto;
+
+    /*Propriedade que define qual será o tamano das linhas, tendo 3 linhas no total*/
     grid-template-rows: 50px 100vh  auto; 
 }
 
 .cabecalho {
-    background: #00cc99;
+    /*Definindo a area da classe*/
     grid-area: cabecalho;
 }
- 
+
 .conteudo {
-    background: #ff8080;
+    /*Definindo a area da classe*/
     grid-area: conteudo;
 }
 
 .rodape {
-    background: #0099ff;
+    /*Definindo a area da classe*/
     grid-area: rodape;
 }

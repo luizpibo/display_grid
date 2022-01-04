@@ -1,0 +1,88 @@
+.caixa {
+    align-items: flex-end;
+    background-color: #dcdcdc;
+    display: flex;
+    justify-content: center;
+}
+
+.destaques {
+    display: grid;
+    /*Definindo o espaçamento entre os elementos do display grid*/
+    grid-gap: .2rem;
+    /*Definindo a area que cada coluna ocupará no layout*/
+    grid-template-columns: 25% 25% 25% 25%;
+    /*Definindo a area que cada linha ocupará no layout*/
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    /*Definindo o valor da altura do elemento usando 100% da altura da pagina subtraindo 50px referentes ao cabeçalho*/
+    height: calc(100vh - 50px);
+}
+
+.destaques__titulo {
+    background: rgba(0,0,0,0.5);
+    color: #fdfdfd;
+    padding: .6rem;
+    text-align: center;
+    width: 100%;
+}
+
+.destaques__principal {
+    background: url('../img/fortnite.jpg') center / cover no-repeat;
+    /*usamos essas propriedades para definir a coluna de inicio e fim dessa sessão*/
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    grid-column: 1 / 4;
+
+    /*usamos essas propriedades para definir a linha de inicio e fim dessa sessão*/
+    /* grid-row-start: 1;
+    grid-row-end: 3; */
+    grid-row: 1 / 3;
+}
+
+.destaques__secundario:nth-child(2) {
+    background: url('../img/pubg.jpg') center / cover no-repeat;
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.destaques__secundario:nth-child(3) {
+    background: url('../img/slack.png') center / cover no-repeat;
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.destaques__secundario:nth-child(4) {
+    background: url('../img/whatsapp.png') center / cover no-repeat;
+    grid-column: 4;
+    grid-row: 3;
+}
+.destaques__secundario:nth-child(5) {
+    background: url('../img/cs-go.jpg') center / cover no-repeat;
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.destaques__categorias {
+    grid-column: 1/3;
+    grid-row: 3;
+}
+
+.destaques__categorias___lista {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.destaques__categorias___item {
+    align-items: center;
+    background: #fdfdfd;
+    border-left: 5px solid transparent;
+    color: #333;
+    display: flex;
+    padding: 1rem;
+    width: 50%;
+}
+
+.destaques__categorias___link {
+    color: inherit;
+}
